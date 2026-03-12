@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skin Care Guide</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background: #fff0f5;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+    header {
+        background: linear-gradient(90deg, #fbc2eb, #a6c1ee);
+        padding: 40px 20px;
+        text-align: center;
+        color: #fff;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+    header p {
+        margin-top: 10px;
+        font-size: 1.2em;
+    }
+    section {
+        max-width: 800px;
+        margin: 30px auto;
+        background: #ffffff;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    section h2 {
+        color: #a52a2a;
+    }
+    section p, section ul {
+        line-height: 1.6;
+    }
+    ul li {
+        margin-bottom: 10px;
+    }
+    .note-section {
+        background: #ffe4e1;
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    .note-section input {
+        padding: 8px;
+        width: 70%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    .note-section button {
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        background: #a6c1ee;
+        color: white;
+        cursor: pointer;
+    }
+    .note-section p {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Healthy Skin Guide</h1>
+    <p>Essential tips for daily skin care</p>
+</header>
+
+<section>
+    <h2>Why Skin Care Matters</h2>
+    <p>
+        Healthy skin protects your body and keeps you looking fresh and confident.
+        Daily skin care helps prevent dryness, irritation, and premature aging.
+    </p>
+</section>
+
+<section>
+    <h2>Use Sunscreen Every Day</h2>
+    <p>
+        Sunscreen protects your skin from harmful UV rays. Even on cloudy days,
+        UV radiation can damage your skin and cause wrinkles, sun spots, and
+        increase the risk of skin cancer.
+    </p>
+    <p>
+        Dermatologists recommend using sunscreen with SPF 30 or higher and
+        reapplying it every few hours when spending time outdoors.
+    </p>
+</section>
+
+<section>
+    <h2>Moisturize Your Skin</h2>
+    <p>
+        A good moisturizer helps maintain your skin barrier and keeps your
+        skin soft and hydrated.
+    </p>
+    <p>
+        Choose a moisturizer suitable for your skin type and apply it
+        after washing your face.
+    </p>
+</section>
+
+<section>
+    <h2>Simple Daily Skin Routine</h2>
+    <ul>
+        <li>Cleanse your face gently</li>
+        <li>Apply moisturizer</li>
+        <li>Use sunscreen during the day</li>
+        <li>Drink water and maintain a healthy diet</li>
+    </ul>
+</section>
+
+<section class="note-section">
+    <h2>Leave a Note</h2>
+    <input type="text" id="noteInput" placeholder="Write a quick note">
+    <button onclick="saveNote()">Save</button>
+    <p id="noteMessage"></p>
+</section>
+
+<script>
+function saveNote() {
+    let note = document.getElementById('noteInput').value;
+    if(note.trim() === "") {
+        document.getElementById('noteMessage').innerText = "Please write something!";
+    } else {
+        document.getElementById('noteMessage').innerText = "You wrote: " + note;
+        document.getElementById('noteInput').value = "";
+    }
+}
+</script>
+
+</body>
+</html>
